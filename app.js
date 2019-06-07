@@ -16,14 +16,14 @@ app.use(express.json());
 //Import Routes
 // const postsRoute = require('./Routes/posts');
 // app.use('/posts', postsRoute);
-
+//
 // const authRoute = require('./Routes/auth');
 // app.use('/api/user', authRoute);
-
-//HOME ROUTE
-app.get('/', (req, res) => {
-    res.send('We are on home');
-});
+//
+// //HOME ROUTE
+// app.get('/', (req, res) => {
+//     res.send('We are on home');
+// });
 
 //CONNECT TO DB
 mongoose.connect(process.env.DB_CONNECTION,
@@ -33,6 +33,8 @@ mongoose.connect(process.env.DB_CONNECTION,
     }
 );
 
+// const router = express.Router();
+// app.use('/', router);
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));

@@ -3,8 +3,8 @@ import React, {Component} from 'react';
 import axios from 'axios';
 
 
-const localURL = 'http://localhost:3002/';
-const herokuURL = 'https://dry-sea-17779.herokuapp.com/';
+const localURL = 'http://localhost:3000/';
+const herokuURL = 'https://morning-thicket-56092.herokuapp.com/';
 
 class App extends Component {
     // initialize our state

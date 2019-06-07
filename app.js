@@ -14,11 +14,11 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
 //Import Routes
-const postsRoute = require('./Routes/posts');
-app.use('/posts', postsRoute);
+// const postsRoute = require('./Routes/posts');
+// app.use('/posts', postsRoute);
 
-const authRoute = require('./Routes/auth');
-app.use('/api/user', authRoute);
+// const authRoute = require('./Routes/auth');
+// app.use('/api/user', authRoute);
 
 //HOME ROUTE
 app.get('/', (req, res) => {

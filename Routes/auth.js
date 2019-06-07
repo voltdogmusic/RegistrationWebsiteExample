@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../models/user');
+const User = require('../models/User');
 const {registerValidation, loginValidation} = require('../validation');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
@@ -75,11 +75,16 @@ router.post('/login', async (req, res) => {
 
     //create and assign token
 
-    const token = jwt.sign({_id: user._id}, process.env.TOKEN_SECRET);
-    res.header('auth-token', token).send(token);
-    res.send('Logged in')
-        .catch((err) => res.send('Logged in Failed'));
+    //still throwing unhandled promise
 
+
+    try{
+        const token = jwt.sign({_id: user._id}, process.env.TOKEN_SECRET);
+        res.header('auth-token', token).send(token);
+        //res.send('Logged in') this throws cannot set headers after set by client
+    }catch (e) {
+        console.log(e)
+    }
 
 });
 

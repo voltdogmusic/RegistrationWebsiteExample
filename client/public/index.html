@@ -115,17 +115,23 @@
 
     <script>
 
+
+        const herokuURL = 'https://morning-thicket-56092.herokuapp.com';
+        const localURL = 'http://localhost:3002';
+
         let password, username = '';
 
         $(document).ready(function () {
-            $('#loginButton').click(function () {
+            $('#loginButton').click(function (e) {
+
+                e.preventDefault();
 
                 username = console.log($('#usernameInput').val());
                 password = console.log($('#passwordInput').val());
 
                 $.ajax({
                     type: 'POST',
-                    url: url,
+                    url: herokuURL+'/api/user/login',
                     data: '{"email": "jQueryIsntBad@gmail.com","password": "jQueryIsntBadgmail.com"}',
                     success: function (data) {
                         alert('data: ' + data);

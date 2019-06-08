@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Thomas Lee Bootstrap Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thomas Lee Bootstrap Site</title>
 
-  <!--BOOTSTRAP-->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  ></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="scss/main.css">
+    <!--BOOTSTRAP-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="scss/main.css">
 
-  <!--PARTICLE.JS-->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <link rel="stylesheet" href="css/particleAndLoginStyles.css">
+    <!--PARTICLE.JS-->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="css/particleAndLoginStyles.css">
 
 
-  <!--SLICEBOX-->
-  <link rel="stylesheet" type="text/css" href="css/sliceboxCombined.css"/>
-  <!--ORDERING OF SCRIPTS MATTERS HERE, SLICEBOX.JS NEEDS ACCESS TO THIS PARTICULAR VERSIONS OF JQ AND IT NEEDS TO BE BEFORE IT-->
-  <!--JQ required for everything -->
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-  <!--required for everything -->
-  <script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
-  <!--required for everything -->
-  <script type="text/javascript" src="js/jquery.slicebox.js"></script>
+    <!--SLICEBOX-->
+    <link rel="stylesheet" type="text/css" href="css/sliceboxCombined.css"/>
+    <!--ORDERING OF SCRIPTS MATTERS HERE, SLICEBOX.JS NEEDS ACCESS TO THIS PARTICULAR VERSIONS OF JQ AND IT NEEDS TO BE BEFORE IT-->
+    <!--JQ required for everything -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!--required for everything -->
+    <script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
+    <!--required for everything -->
+    <script type="text/javascript" src="js/jquery.slicebox.js"></script>
 </head>
 <!--main color #e3f2fd-->
 <body>
@@ -34,86 +34,110 @@
 <!--NAVBAR**********************************************************-->
 <nav class="navbar navbar-expand-md navbar-light " style="background-color: #e3f2fd;">
 
-  <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Brand</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Home</a>
-      </li>
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Brand</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
 
-      <!--shown on lg and above-->
-      <div class="btn-group dropright d-none d-lg-block ">
+            <!--shown on lg and above-->
+            <div class="btn-group dropright d-none d-lg-block ">
 
-        <button type="button" class="btn pt-1.9">
-          This Was
+                <button type="button" class="btn pt-1.9">
+                    This Was
+                </button>
+
+                <button type="button" class="btn dropdown-toggle dropdown-toggle-split pt-0" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropright</span>
+                </button>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <button class="dropdown-item" type="button">Made</button>
+                    <button class="dropdown-item" type="button">By</button>
+                    <div class="dropdown-divider"></div>
+                    <button class="dropdown-item" type="button">tlee7222@gmail.com</button>
+                </div>
+            </div>
+
+
+        </ul>
+    </div>
+
+
+    <div class="mx-auto order-0">
+        <a class="navbar-brand mx-auto pt-0 " href="#">Welcome</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <span class="navbar-toggler-icon"></span>
         </button>
-
-        <button type="button" class="btn dropdown-toggle dropdown-toggle-split pt-0" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-          <span class="sr-only">Toggle Dropright</span>
-        </button>
-
-        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-          <button class="dropdown-item" type="button">Made</button>
-          <button class="dropdown-item" type="button">By</button>
-          <div class="dropdown-divider"></div>
-          <button class="dropdown-item" type="button">tlee7222@gmail.com</button>
-        </div>
-      </div>
+    </div>
 
 
-    </ul>
-  </div>
+    <div class="navbar-collapse collapse w-100 order-3 order-md-4 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
 
+            <li class="nav-item">
+                <a class="nav-link" href="#">Right</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
 
-  <div class="mx-auto order-0">
-    <a class="navbar-brand mx-auto pt-0 " href="#">Welcome</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </div>
-
-
-  <div class="navbar-collapse collapse w-100 order-3 order-md-4 dual-collapse2">
-    <ul class="navbar-nav ml-auto">
-
-      <li class="nav-item">
-        <a class="nav-link" href="#">Right</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </ul>
-  </div>
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </ul>
+    </div>
 
 </nav>
 <!-------------------------------------------------------------------->
 
 <!--PARTICLEJS******************************************************-->
 <div id="particles-js">
-  <div id="login">
-    <form>
-      <div>
-        <label for="username">Username</label>
-        <br>
-        <input type="text" placeholder="Username">
-      </div>
+    <div id="login">
+        <form>
+            <div>
+                <label for="username">E-mail</label>
+                <br>
+                <input id="usernameInput" type="text" placeholder="E-mail">
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <br>
+                <input id="passwordInput" type="text" placeholder="Password">
+            </div>
+            <button id="loginButton" class="btn btn-secondary " style=" color: black; background-color: #e3f2fd;">Login
+            </button>
+        </form>
+    </div>
 
-      <div>
-        <label for="password">Password</label>
-        <br>
-        <input type="text" placeholder="Password">
-      </div>
-      <button href="#" class="btn btn-secondary " style=" color: black; background-color: #e3f2fd;">Login
-      </button>
-    </form>
-    <div id="root"></div>
-  </div>
+    <script>
+
+        let password, username = '';
+
+        $(document).ready(function () {
+            $('#loginButton').click(function () {
+
+                username = console.log($('#usernameInput').val());
+                password = console.log($('#passwordInput').val());
+
+                $.ajax({
+                    type: 'POST',
+                    url: url,
+                    data: '{"email": "jQueryIsntBad@gmail.com","password": "jQueryIsntBadgmail.com"}',
+                    success: function (data) {
+                        alert('data: ' + data);
+                    },
+                    contentType: "application/json",
+                    dataType: 'json'
+                });
+            });
+        });
+
+
+    </script>
 
 
 </div>
@@ -132,83 +156,83 @@
 <!--Card and Accordion******************************************************-->
 <div style="display: flex; flex-direction: row">
 
-  <!--Card******************************************************-->
-  <div class="card" style="width: 18rem; flex-shrink: 0;">
-    <img class="card-img-top" src="images/medicalcomputer.png" alt="images/medicalcomputer.png">
-    <div class="card-body">
-      <h5 class="card-title">Time to save this operation</h5>
-      <p class="card-text">With a plan so good you can skip your next doctor's appointment</p>
-      <a href="#" class="btn btn-secondary " style=" color: black; background-color: #e3f2fd;">Free Health</a>
+    <!--Card******************************************************-->
+    <div class="card" style="width: 18rem; flex-shrink: 0;">
+        <img class="card-img-top" src="images/medicalcomputer.png" alt="images/medicalcomputer.png">
+        <div class="card-body">
+            <h5 class="card-title">Time to save this operation</h5>
+            <p class="card-text">With a plan so good you can skip your next doctor's appointment</p>
+            <a href="#" class="btn btn-secondary " style=" color: black; background-color: #e3f2fd;">Free Health</a>
+        </div>
     </div>
-  </div>
 
-  <!--Accordion******************************************************-->
-  <div id="accordion">
-    <div class="card">
-      <div class="card-header" id="headingOne">
-        <h5 class="mb-0">
-          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
-                  aria-controls="collapseOne">
-            Collapsible Group Item #1
-          </button>
-        </h5>
-      </div>
+    <!--Accordion******************************************************-->
+    <div id="accordion">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                            aria-controls="collapseOne">
+                        Collapsible Group Item #1
+                    </button>
+                </h5>
+            </div>
 
-      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-        <div class="card-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-          wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-          eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
-          assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-          sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-          farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-          labore sustainable VHS.
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                    wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                    eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                    assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                    labore sustainable VHS.
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header" id="headingTwo">
-        <h5 class="mb-0">
-          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
-                  aria-expanded="false" aria-controls="collapseTwo">
-            Collapsible Group Item #2
-          </button>
-        </h5>
-      </div>
-      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-        <div class="card-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-          wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-          eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
-          assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-          sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-          farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-          labore sustainable VHS.
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="false" aria-controls="collapseTwo">
+                        Collapsible Group Item #2
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                    wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                    eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                    assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                    labore sustainable VHS.
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header" id="headingThree">
-        <h5 class="mb-0">
-          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
-                  aria-expanded="false" aria-controls="collapseThree">
-            Collapsible Group Item #3
-          </button>
-        </h5>
-      </div>
-      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-        <div class="card-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-          wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-          eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
-          assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-          sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-          farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-          labore sustainable VHS.
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                            aria-expanded="false" aria-controls="collapseThree">
+                        Collapsible Group Item #3
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                    wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                    eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                    assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                    labore sustainable VHS.
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 
 </div>
 <!-------------------------------------------------------------------->
@@ -222,52 +246,52 @@
 <div class="sliceBoxWrapper">
 
 
-  <ul id="sb-slider" class="sb-slider">
-    <li>
-      <a href="#" target="_blank"><img src="images/blueManSmall.png"
-                                       alt="image1"/></a>
-      <div class="sb-description">
-        <h3 style="text-align: center">A Creative Lifesaver</h3>
-      </div>
-    </li>
-    <li>
-      <a href="#" target="_blank"><img src="images/stickyNotesSmall.png"
-                                       alt="image2"/></a>
-      <div class="sb-description">
-        <h3 style="text-align: left; color: #fff">That sticks to your plan</h3>
-      </div>
-    </li>
-    <li>
-      <a href="#" target="_blank"><img src="images/teamworkSmall.png"
-                                       alt="image1"/></a>
-      <div class="sb-description">
-        <h3 style="text-align: right">To invigorate your team</h3>
-      </div>
-    </li>
-  </ul>
+    <ul id="sb-slider" class="sb-slider">
+        <li>
+            <a href="#" target="_blank"><img src="images/blueManSmall.png"
+                                             alt="image1"/></a>
+            <div class="sb-description">
+                <h3 style="text-align: center">A Creative Lifesaver</h3>
+            </div>
+        </li>
+        <li>
+            <a href="#" target="_blank"><img src="images/stickyNotesSmall.png"
+                                             alt="image2"/></a>
+            <div class="sb-description">
+                <h3 style="text-align: left; color: #fff">That sticks to your plan</h3>
+            </div>
+        </li>
+        <li>
+            <a href="#" target="_blank"><img src="images/teamworkSmall.png"
+                                             alt="image1"/></a>
+            <div class="sb-description">
+                <h3 style="text-align: right">To invigorate your team</h3>
+            </div>
+        </li>
+    </ul>
 
-  <style>
-    h3 {
-      font-weight: 800;
-      color: #000000;
-      text-shadow: 3px 3px 2px #E3F2FD;
-    }
+    <style>
+        h3 {
+            font-weight: 800;
+            color: #000000;
+            text-shadow: 3px 3px 2px #E3F2FD;
+        }
 
-  </style>
+    </style>
 
 
-  <div id="shadow" class="shadow"></div>
+    <div id="shadow" class="shadow"></div>
 
-  <div id="nav-arrows" class="nav-arrows">
-    <a href="#">Next</a>
-    <a href="#">Previous</a>
-  </div>
+    <div id="nav-arrows" class="nav-arrows">
+        <a href="#">Next</a>
+        <a href="#">Previous</a>
+    </div>
 
-  <div id="nav-dots" class="nav-dots">
-    <span class="nav-dot-current"></span>
-    <span></span>
-    <span></span>
-  </div>
+    <div id="nav-dots" class="nav-dots">
+        <span class="nav-dot-current"></span>
+        <span></span>
+        <span></span>
+    </div>
 
 </div>
 
@@ -357,76 +381,76 @@
 
 <!--Form******************************************************-->
 <div class="formWrapper">
-  <h1 style="margin-bottom: 2rem">Create an account</h1>
-  <form class="needs-validation" novalidate>
-    <div class="form-row">
-      <div class="col-md-4 mb-3">
-        <label for="validationCustom01">First name</label>
-        <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark"
-               required>
-        <div class="valid-feedback">
-          Looks good!
+    <h1 style="margin-bottom: 2rem">Create an account</h1>
+    <form class="needs-validation" novalidate>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom01">First name</label>
+                <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark"
+                       required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom02">Last name</label>
+                <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto"
+                       required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationCustomUsername">Username</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    </div>
+                    <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username"
+                           aria-describedby="inputGroupPrepend" required>
+                    <div class="invalid-feedback">
+                        Please choose a username.
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-md-4 mb-3">
-        <label for="validationCustom02">Last name</label>
-        <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto"
-               required>
-        <div class="valid-feedback">
-          Looks good!
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <label for="validationCustom03">City</label>
+                <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+                <div class="invalid-feedback">
+                    Please provide a valid city.
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="validationCustom04">State</label>
+                <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+                <div class="invalid-feedback">
+                    Please provide a valid state.
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="validationCustom05">Zip</label>
+                <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+                <div class="invalid-feedback">
+                    Please provide a valid zip.
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-md-4 mb-3">
-        <label for="validationCustomUsername">Username</label>
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroupPrepend">@</span>
-          </div>
-          <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username"
-                 aria-describedby="inputGroupPrepend" required>
-          <div class="invalid-feedback">
-            Please choose a username.
-          </div>
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                    Agree to terms and conditions
+                </label>
+                <div class="invalid-feedback">
+                    You must agree before submitting.
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="col-md-6 mb-3">
-        <label for="validationCustom03">City</label>
-        <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
-        <div class="invalid-feedback">
-          Please provide a valid city.
-        </div>
-      </div>
-      <div class="col-md-3 mb-3">
-        <label for="validationCustom04">State</label>
-        <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
-        <div class="invalid-feedback">
-          Please provide a valid state.
-        </div>
-      </div>
-      <div class="col-md-3 mb-3">
-        <label for="validationCustom05">Zip</label>
-        <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
-        <div class="invalid-feedback">
-          Please provide a valid zip.
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-        <label class="form-check-label" for="invalidCheck">
-          Agree to terms and conditions
-        </label>
-        <div class="invalid-feedback">
-          You must agree before submitting.
-        </div>
-      </div>
-    </div>
-    <button href="#" class="btn btn-secondary " style=" color: black; background-color: #e3f2fd;">Submit form
-    </button>
-  </form>
+        <button href="#" class="btn btn-secondary " style=" color: black; background-color: #e3f2fd;">Submit form
+        </button>
+    </form>
 </div>
 
 <script>
@@ -453,23 +477,24 @@
 
 <!--Section4 And Social Media Links******************************************************-->
 <section class="section-light4">
-  <div class="smlinks">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <a href="https://www.facebook.com/voltdogmusic/" class="fa fa-facebook"></a>
-    <a href="https://twitter.com/VOLTDOGmusic" class="fa fa-twitter"></a>
-    <a href="https://www.linkedin.com/in/thomas-lee-609453181/" class="fa fa-linkedin"></a>
-    <a href="https://www.youtube.com/c/voltdogmusic/videos" class="fa fa-youtube"></a>
-    <a href="https://www.instagram.com/voltdogmusic/" class="fa fa-instagram"></a>
-    <a href="https://soundcloud.com/voltdogmusic" class="fa fa-soundcloud"></a>
-    <div>
-      <a class='email' href="mailto:tlee7222@gmail.com">Contact</a>
+    <div class="smlinks">
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <a href="https://www.facebook.com/voltdogmusic/" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/VOLTDOGmusic" class="fa fa-twitter"></a>
+        <a href="https://www.linkedin.com/in/thomas-lee-609453181/" class="fa fa-linkedin"></a>
+        <a href="https://www.youtube.com/c/voltdogmusic/videos" class="fa fa-youtube"></a>
+        <a href="https://www.instagram.com/voltdogmusic/" class="fa fa-instagram"></a>
+        <a href="https://soundcloud.com/voltdogmusic" class="fa fa-soundcloud"></a>
+        <div>
+            <a class='email' href="mailto:tlee7222@gmail.com">Contact</a>
+        </div>
     </div>
-  </div>
 </section>
 <!-------------------------------------------------------------------->
 
 
-
+<div id="root"></div>
 </body>
 </html>
 

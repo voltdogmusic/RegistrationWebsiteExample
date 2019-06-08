@@ -6,7 +6,7 @@ const verify = require('./verifyToken');
 
 //get all posts using mongoose models find method
 //https://mongoosejs.com/docs/models.html
-router.get('/', verify, async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         const posts = await Post.find();
         res.json(posts);

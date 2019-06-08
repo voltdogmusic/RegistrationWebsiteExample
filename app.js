@@ -7,25 +7,14 @@ const app = express();
 //Middlewares---
 app.use(cors());
 
-//Body-parser THIS MUST BE BEFORE THE ROUTE (i think)
-//app.use(bodyParser.json());
-//you don't need above, just use this
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
-//Import Routes
-// const postsRoute = require('./Routes/posts');
-// app.use('/posts', postsRoute);
-//
-// const authRoute = require('./Routes/auth');
-// app.use('/api/user', authRoute);
-//
-// //HOME ROUTE
-// app.get('/', (req, res) => {
-//     res.send('We are on home');
-// });
 
-//CONNECT TO DB
+app.use('/posts', require('./Routes/posts'));
+app.use('/api/user', require('./Routes/auth'));
+
+
 mongoose.connect(process.env.DB_CONNECTION,
     {useNewUrlParser: true},
     () => {

@@ -27,6 +27,7 @@
     <script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
     <!--required for everything -->
     <script type="text/javascript" src="js/jquery.slicebox.js"></script>
+
 </head>
 <!--main color #e3f2fd-->
 <body>
@@ -97,16 +98,16 @@
 <!--PARTICLEJS******************************************************-->
 <div id="particles-js">
     <div id="login">
-        <form>
+        <form id="topForm">
             <div>
-                <label for="username">E-mail</label>
+                <label>E-mail</label>
                 <br>
-                <input id="usernameInput" type="text" placeholder="E-mail">
+                <input id="emailTop" type="text" placeholder="E-mail">
             </div>
             <div>
-                <label for="password">Password</label>
+                <label>Password</label>
                 <br>
-                <input id="passwordInput" type="text" placeholder="Password">
+                <input id="passwordTop" type="text" placeholder="Password">
             </div>
             <button id="loginButton" class="btn btn-secondary " style=" color: black; background-color: #e3f2fd;">Login
             </button>
@@ -114,37 +115,48 @@
     </div>
 
     <script>
-
-
         const herokuURL = 'https://morning-thicket-56092.herokuapp.com';
         const localURL = 'http://localhost:3002';
 
-        let password, username = '';
+        let passwordTop, emailTop = '';
 
         $(document).ready(function () {
             $('#loginButton').click(function (e) {
-
                 e.preventDefault();
-
-                username = console.log($('#usernameInput').val());
-                password = console.log($('#passwordInput').val());
-
+                emailTop = $('#emailTop').val();
+                passwordTop = $('#passwordTop').val();
                 $.ajax({
                     type: 'POST',
-                    url: herokuURL+'/api/user/login',
-                    data: '{"email": "jQueryIsntBad@gmail.com","password": "jQueryIsntBadgmail.com"}',
+                    url: localURL + '/api/user/login',
+                    data: JSON.stringify({"email": emailTop, "password": passwordTop}),
                     success: function (data) {
-                        alert('data: ' + data);
+
+
+                        var span = document.createElement("DIV");
+                        span.id = "::addedSpan2";
+                        span.style.cssText = 'font-size: 1rem; color: #28a745;';
+                        var t = document.createTextNode(" Login Successful!");
+                        span.appendChild(t);
+                        document.getElementById("topForm").appendChild(span);
+
+
+                        //this actually logs the JWT, so i guess would use this later on for to access other routes
+                        console.log('logged in');
+                        console.log(data.responseText);
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        console.log("Login error");
+                        //display response text somewhere
+                        console.log(jqXHR.responseText);
+                        console.log(textStatus);
+                        console.log(errorThrown);
                     },
                     contentType: "application/json",
-                    dataType: 'json'
+                    dataType: "text"
                 });
             });
         });
-
-
     </script>
-
 
 </div>
 <script>
@@ -387,59 +399,89 @@
 
 <!--Form******************************************************-->
 <div class="formWrapper">
-    <h1 style="margin-bottom: 2rem">Create an account</h1>
+    <h1 id="createAnAccount" style="margin-bottom: 2rem">Create an account
+        <span id="addToMe"></span>
+    </h1>
     <form class="needs-validation" novalidate>
         <div class="form-row">
             <div class="col-md-4 mb-3">
-                <label for="validationCustom01">First name</label>
-                <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark"
+                <label for="firstName">First name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="First name" value="Mark"
                        required>
                 <div class="valid-feedback">
                     Looks good!
                 </div>
+                <div class="invalid-feedback">
+                    Please enter your first name.
+                </div>
             </div>
             <div class="col-md-4 mb-3">
-                <label for="validationCustom02">Last name</label>
-                <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto"
+                <label for="lastName">Last name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Last name" value="Otto"
                        required>
                 <div class="valid-feedback">
                     Looks good!
                 </div>
+                <div class="invalid-feedback">
+                    Please enter your last name.
+                </div>
             </div>
             <div class="col-md-4 mb-3">
-                <label for="validationCustomUsername">Username</label>
+                <label for="emailBottom">Email</label>
                 <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroupPrepend">@</span>
-                    </div>
-                    <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username"
-                           aria-describedby="inputGroupPrepend" required>
+                    <input type="text" class="form-control" id="emailBottom" placeholder="At least 6 characters"
+                           aria-describedby="inputGroupPrepend" minlength="6" required>
                     <div class="invalid-feedback">
-                        Please choose a username.
+                        Please provide a valid email
                     </div>
+                    <div class="valid-feedback" id="emailPositiveFeedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback-2" id="emailAlreadyExists">
+                        Email already exists
+                    </div>
+                    <style>
+                        .invalid-feedback-2 {
+                            display: none;
+                            width: 100%;
+                            margin-top: 0.25rem;
+                            font-size: 80%;
+                            color: #dc3545;
+                        }
+                    </style>
                 </div>
             </div>
         </div>
         <div class="form-row">
             <div class="col-md-6 mb-3">
-                <label for="validationCustom03">City</label>
-                <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+                <label for="city">City</label>
+                <input type="text" class="form-control" id="city" placeholder="City" required>
                 <div class="invalid-feedback">
                     Please provide a valid city.
                 </div>
-            </div>
-            <div class="col-md-3 mb-3">
-                <label for="validationCustom04">State</label>
-                <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
-                <div class="invalid-feedback">
-                    Please provide a valid state.
+                <div class="valid-feedback">
+                    Looks good!
                 </div>
             </div>
             <div class="col-md-3 mb-3">
-                <label for="validationCustom05">Zip</label>
-                <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+                <label for="state">State</label>
+                <input type="text" class="form-control" id="state" placeholder="State" required>
                 <div class="invalid-feedback">
-                    Please provide a valid zip.
+                    Please provide a valid state.
+                </div>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="passwordBottom">Password</label>
+                <input type="text" class="form-control" id="passwordBottom" placeholder="At least 6 characters"
+                       minlength="6" required>
+                <div class="invalid-feedback">
+                    Password must be 6 characters.
+                </div>
+                <div class="valid-feedback">
+                    Looks good!
                 </div>
             </div>
         </div>
@@ -454,12 +496,32 @@
                 </div>
             </div>
         </div>
-        <button href="#" class="btn btn-secondary " style=" color: black; background-color: #e3f2fd;">Submit form
+        <button id="registerButton" class="btn btn-secondary " style=" color: black; background-color: #e3f2fd;">Submit
+            form
         </button>
     </form>
 </div>
 
+
 <script>
+
+    //makes it red, displays invalid message, makes the x
+
+
+    //makes it valid
+    //document.getElementById("emailBottom").classList.add("is-valid");
+
+
+    //doesn't work, can't apply p classes...perhaps need to chang styles to display:none
+    //document.getElementById("emailBottom").classList.add("invalid");
+    //document.getElementById("emailBottom").classList.add("is-valid");
+
+    //not sure
+    //document.getElementById("emailBottom").classList.remove("needs-validation");
+
+    //document.getElementById("emailBottom").classList.remove("was-validated");
+
+
     // Example starter JavaScript for disabling form submissions if there are invalid fields
     (function () {
         'use strict';
@@ -469,16 +531,128 @@
             // Loop over them and prevent submission
             var validation = Array.prototype.filter.call(forms, function (form) {
                 form.addEventListener('submit', function (event) {
-                    if (form.checkValidity() === false) {
+                    //you must check all nodes within the form
+                    if (form[0].checkValidity() === false) {
                         event.preventDefault();
                         event.stopPropagation();
                     }
+                    event.preventDefault();
                     form.classList.add('was-validated');
+
+                    register();
                 }, false);
             });
+
+
         }, false);
+
     })();
+
+
+    function register() {
+
+        //resetting error messages under the email box
+        document.getElementById("emailAlreadyExists").style.cssText = 'display: none;';
+        document.getElementById("emailBottom").classList.remove("is-invalid");
+
+
+        //Clear error messages about email and password length
+        //also clears success message, but that doesn't matter
+        var myNode = document.getElementById("addToMe");
+        while (myNode.firstChild) {
+            myNode.removeChild(myNode.firstChild);
+        }
+
+        let passwordBottom, emailBottom, firstName, lastName, city, state = '';
+        $(document).ready(function () {
+            firstName = $('#firstName').val();
+            lastName = $('#lastName').val();
+            city = $('#city').val();
+            state = $('#state').val();
+            emailBottom = $('#emailBottom').val();
+            passwordBottom = $('#passwordBottom').val();
+
+            if (emailBottom.length < 6) {
+                var span = document.createElement("DIV");
+                span.id = "::addedSpan";
+                span.style.cssText = 'font-size: 1rem; color: #FF0000;';
+                var t = document.createTextNode(" Email must be at least 6 characters");
+                span.appendChild(t);
+                document.getElementById("addToMe").appendChild(span);
+                return;
+            }
+
+            if (emailBottom.length >= 6 && passwordBottom.length < 6) {
+                var span = document.createElement("DIV");
+                span.id = "::addedSpan2";
+                span.style.cssText = 'font-size: 1rem; color: #FF0000;';
+                var t = document.createTextNode(" Password must be at least 6 characters");
+                span.appendChild(t);
+                document.getElementById("addToMe").appendChild(span);
+                return;
+            }
+
+            console.log(firstName, lastName, city, state, emailBottom, passwordBottom);
+
+            $.ajax({
+                type: 'POST',
+                url: localURL + '/api/user/register',
+                data: JSON.stringify({
+                    "firstName": firstName,
+                    "lastName": lastName,
+                    "email": emailBottom,
+                    "city": city,
+                    "state": state,
+                    "password": passwordBottom
+                }),
+                success: function (data) {
+                    var span = document.createElement("DIV");
+                    span.id = "::addedSpan2";
+                    span.style.cssText = 'font-size: 2rem; color: #28a745;';
+                    var t = document.createTextNode(" Account created!");
+                    span.appendChild(t);
+                    document.getElementById("addToMe").appendChild(span);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+
+                    function emailExists() {
+                        var span = document.createElement("DIV");
+                        span.id = "::addedSpan2";
+                        span.style.cssText = 'font-size: 1rem; color: #FF0000;';
+                        var t = document.createTextNode(" Email exists");
+                        span.appendChild(t);
+                        document.getElementById("addToMe").appendChild(span);
+
+                        //remove positive feedback
+                        document.getElementById("emailPositiveFeedback").style.cssText = 'display: none;';
+
+                        //add email already exists
+                        document.getElementById("emailAlreadyExists").style.cssText = 'display: inline;';
+
+                        //remove was-validated from email section
+                        //document.getElementById("emailBottom").classList.remove("was-validated");
+                        //document.getElementById("emailBottom").classList.remove("is-valid");
+                        //document.getElementById("emailBottom").classList.remove("valid");
+                        document.getElementById("emailBottom").classList.add("is-invalid");
+                        //document.getElementById("emailBottom").classList.add("invalid");
+
+                    }
+
+                    if (jqXHR.responseText == 'Email already exists') {
+                        emailExists();
+                    }
+
+                },
+                contentType: "application/json",
+                dataType: 'json'
+            });
+        });
+    }
+
+
 </script>
+
+
 <!-------------------------------------------------------------------->
 
 <!--Section4 And Social Media Links******************************************************-->
@@ -500,21 +674,9 @@
 <!-------------------------------------------------------------------->
 
 
+<!--Unused react root-->
 <div id="root"></div>
 </body>
 </html>
-
-
-<!--change text in collapseables and possible add pictures-->
-
-<!--Maybe-->
-<!--change entire site background??-->
-<!--create an account button at top that scrolls to bottom, or just use another modal?-->
-
-
-
-
-
-
 
 

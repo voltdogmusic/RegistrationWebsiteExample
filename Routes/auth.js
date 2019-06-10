@@ -5,7 +5,8 @@ const {registerValidation, loginValidation} = require('../validation');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
-//get all users
+//get all users, this route should not be accessible to the client
+
 router.get('/register', async (req, res) => {
     try {
         const posts = await User.find();
@@ -40,8 +41,11 @@ router.post('/register', async (req, res) => {
 
     //creating a new user
     const user = new User({
-        name: req.body.name,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
         email: req.body.email,
+        city: req.body.city,
+        state: req.body.state,
         password: hashedPassword
     });
     try {
@@ -67,7 +71,7 @@ router.post('/login', async (req, res) => {
     }
 
     //check if pass is correct
-    const validPass = await bcrypt.compare(req.body.password, user.password)
+    const validPass = await bcrypt.compare(req.body.password, user.password);
 
     if (!validPass) {
         return res.status(400).send('Invalid Password');
@@ -75,16 +79,15 @@ router.post('/login', async (req, res) => {
 
     //create and assign token
 
-    //still throwing unhandled promise
-
-
     try{
         const token = jwt.sign({_id: user._id}, process.env.TOKEN_SECRET);
-        res.header('auth-token', token).send(token);
-        //res.send('Logged in') this throws cannot set headers after set by client
+        res.header('auth-token', token).send(token).status(200);
+
     }catch (e) {
         console.log(e)
     }
+
+    //return res.status(200).send('Logged In!');
 
 });
 

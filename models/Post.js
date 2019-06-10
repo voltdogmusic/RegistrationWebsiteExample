@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+//schema isnt being used
 const PostSchmea = mongoose.Schema({
     title: {
       type: String,

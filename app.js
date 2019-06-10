@@ -11,7 +11,14 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
 
+//Any URL with the first param is redirected to the second params folder, then the remaining URL sent in is used to find the final endpoint
+//api/user/register = api/user redirects to Routes/auth then register is used to located the enpoint in that js file
+
+
+//route not used
 app.use('/posts', require('./Routes/posts'));
+
+//this route is being used for api/user/login and api/user/register
 app.use('/api/user', require('./Routes/auth'));
 
 

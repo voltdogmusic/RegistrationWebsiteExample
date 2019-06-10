@@ -24,11 +24,29 @@ body {
     left: 50px;
 }
 
+/*this did not work on heroku*/
 #login input[type="text"], #login input[type="password"] {
+    /*padding: 7px;*/
+    /*margin-bottom: 10px;*/
+    /*border: 1px #ccc solid;*/
+}
+
+#emailTop{
     padding: 7px;
     margin-bottom: 10px;
     border: 1px #ccc solid;
 }
+
+#passwordTop{
+    padding: 7px;
+    margin-bottom: 10px;
+    border: 1px #ccc solid;
+}
+
+
+
+
+
 
 .section-light {
     background-color: #e3f2fd;

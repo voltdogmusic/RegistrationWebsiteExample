@@ -94,10 +94,6 @@
         }
     </script>
 
-
-
-
-
     <div class="navbar-collapse collapse w-100 order-3 order-md-4 dual-collapse2">
         <ul class="navbar-nav ml-auto">
 
@@ -193,10 +189,10 @@
 <!-------------------------------------------------------------------->
 
 <!--Card and Accordion******************************************************-->
-<div style="display: flex; flex-direction: row">
+<div style="display: flex; flex-direction: row; width: 100%">
 
     <!--Card******************************************************-->
-    <div class="card" style="width: 18rem; flex-shrink: 0;">
+    <div class="card" id ="singleCard" style="width: 18rem; flex-shrink: 0;">
         <img class="card-img-top" src="images/medicalcomputer.png" alt="images/medicalcomputer.png">
         <div class="card-body">
             <h5 class="card-title">Time to save this operation</h5>
@@ -234,7 +230,7 @@
                 <h5 class="mb-0">
                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
                             aria-expanded="false" aria-controls="collapseTwo">
-                        The backend was created with Node.js, Express.js and MongoDB/Mongoose, try creating an account and logging in!
+                        The back end was created with Node.js, Express.js and MongoDB/Mongoose, try creating an account and logging in!
                     </button>
                 </h5>
             </div>
@@ -272,8 +268,22 @@
             </div>
         </div>
     </div>
-
 </div>
+
+
+<style>
+    /* Extra small devices (phones, 640px and down) */
+    @media only screen and (max-width: 640px) {
+        #singleCard{
+            display: none;
+        }
+
+        #accordion{
+            transform: translateX(-15px);
+        }
+    }
+</style>
+
 <!-------------------------------------------------------------------->
 
 <!--Section2******************************************************-->

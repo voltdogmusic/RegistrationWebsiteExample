@@ -31,22 +31,17 @@ body {
     /*border: 1px #ccc solid;*/
 }
 
-#emailTop{
+#emailTop {
     padding: 7px;
     margin-bottom: 10px;
     border: 1px #ccc solid;
 }
 
-#passwordTop{
+#passwordTop {
     padding: 7px;
     margin-bottom: 10px;
     border: 1px #ccc solid;
 }
-
-
-
-
-
 
 .section-light {
     background-color: #e3f2fd;
@@ -54,7 +49,7 @@ body {
     padding: 25px 25px;
 }
 
-.card{
+.card {
     margin-top: 2rem;
     margin-left: 2rem;
 }
@@ -73,7 +68,7 @@ body {
 
 }
 
-.formWrapper{
+.formWrapper {
     margin: 2rem 2rem 2rem 2rem;
 }
 
@@ -84,7 +79,7 @@ body {
 }
 
 /*Social Media Icons And Email Div***************************************/
-.smlinks{
+.smlinks {
     position: relative;
     text-align: center;
     /*be careful of this for future projects*/

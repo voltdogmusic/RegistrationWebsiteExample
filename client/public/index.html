@@ -32,7 +32,7 @@
 <!--main color #e3f2fd-->
 <body>
 
-<!--NAVBAR**********************************************************-->
+<!--NAVBAR + LOGIN POSITION SCRIPT**********************************************************-->
 <nav class="navbar navbar-expand-md navbar-light " style="background-color: #e3f2fd;">
 
     <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
@@ -60,7 +60,7 @@
                     <button class="dropdown-item" type="button">Made</button>
                     <button class="dropdown-item" type="button">By</button>
                     <div class="dropdown-divider"></div>
-                    <button class="dropdown-item" type="button">tlee7222@gmail.com</button>
+                    <button onclick="window.location.href = 'https://www.linkedin.com/in/thomas-lee-609453181/';" class="dropdown-item" type="button">tlee7222@gmail.com</button>
                 </div>
             </div>
 
@@ -71,10 +71,31 @@
 
     <div class="mx-auto order-0">
         <a class="navbar-brand mx-auto pt-0 " href="#">Welcome</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+        <button onclick="toggleLogin()" class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
+
+
+    <script>
+
+        var loginSwitch = true;
+        function toggleLogin() {
+
+
+            if(loginSwitch){
+                document.getElementById("login").style.cssText = "position: static;";
+                loginSwitch = false;
+            }else{
+                document.getElementById("login").style.cssText = "position: absolute;";
+                loginSwitch = true;
+            }
+
+        }
+    </script>
+
+
+
 
 
     <div class="navbar-collapse collapse w-100 order-3 order-md-4 dual-collapse2">
@@ -95,7 +116,7 @@
 </nav>
 <!-------------------------------------------------------------------->
 
-<!--PARTICLEJS******************************************************-->
+<!--PARTICLEJS AND LOGIN******************************************************-->
 <div id="particles-js">
     <div id="login">
         <form id="topForm">
@@ -191,7 +212,7 @@
                 <h5 class="mb-0">
                     <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
                             aria-controls="collapseOne">
-                        Collapsible Group Item #1
+                        This is a full stack website created by Thomas Lee and deployed with Heroku- tlee7222@gmail.com
                     </button>
                 </h5>
             </div>
@@ -213,7 +234,7 @@
                 <h5 class="mb-0">
                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
                             aria-expanded="false" aria-controls="collapseTwo">
-                        Collapsible Group Item #2
+                        The backend was created with Node.js, Express.js and MongoDB/Mongoose, try creating an account and logging in!
                     </button>
                 </h5>
             </div>
@@ -234,7 +255,7 @@
                 <h5 class="mb-0">
                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
                             aria-expanded="false" aria-controls="collapseThree">
-                        Collapsible Group Item #3
+                        The front end was created with Bootstrap 4, jQuery and particles.js
                     </button>
                 </h5>
             </div>
@@ -258,6 +279,24 @@
 <!--Section2******************************************************-->
 <section class="section-light2">
 </section>
+<!-------------------------------------------------------------------->
+
+<!-- Particles-js2 -->
+<div id="particles-js2"></div>
+<script>
+    particlesJS.load('particles-js2', 'particles.json', function () {
+        console.log('particles.json loaded...');
+    });
+</script>
+<style>
+    #particles-js2 {
+        background: transparent;
+        height: 500px;
+        width: 100%;
+        z-index: 0;
+        position: absolute;
+    }
+</style>
 <!-------------------------------------------------------------------->
 
 <!--SLICEBOX********************************************************-->
@@ -312,7 +351,6 @@
     </div>
 
 </div>
-
 <script type="text/javascript">
     $(function () {
 
@@ -501,8 +539,6 @@
         </button>
     </form>
 </div>
-
-
 <script>
 
     //makes it red, displays invalid message, makes the x
@@ -651,8 +687,6 @@
 
 
 </script>
-
-
 <!-------------------------------------------------------------------->
 
 <!--Section4 And Social Media Links******************************************************-->

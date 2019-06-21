@@ -60,7 +60,9 @@
                     <button class="dropdown-item" type="button">Made</button>
                     <button class="dropdown-item" type="button">By</button>
                     <div class="dropdown-divider"></div>
-                    <button onclick="window.location.href = 'https://www.linkedin.com/in/thomas-lee-609453181/';" class="dropdown-item" type="button">tlee7222@gmail.com</button>
+                    <button onclick="window.location.href = 'https://www.linkedin.com/in/thomas-lee-609453181/';"
+                            class="dropdown-item" type="button">tlee7222@gmail.com
+                    </button>
                 </div>
             </div>
 
@@ -71,7 +73,8 @@
 
     <div class="mx-auto order-0">
         <a class="navbar-brand mx-auto pt-0 " href="#">Welcome</a>
-        <button onclick="toggleLogin()" class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+        <button onclick="toggleLogin()" class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target=".dual-collapse2">
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
@@ -80,13 +83,14 @@
     <script>
 
         var loginSwitch = true;
+
         function toggleLogin() {
 
 
-            if(loginSwitch){
+            if (loginSwitch) {
                 document.getElementById("login").style.cssText = "position: static;";
                 loginSwitch = false;
-            }else{
+            } else {
                 document.getElementById("login").style.cssText = "position: absolute;";
                 loginSwitch = true;
             }
@@ -192,7 +196,7 @@
 <div style="display: flex; flex-direction: row; width: 100%">
 
     <!--Card******************************************************-->
-    <div class="card" id ="singleCard" style="width: 18rem; flex-shrink: 0;">
+    <div class="card" id="singleCard" style="width: 18rem; flex-shrink: 0;">
         <img class="card-img-top" src="images/medicalcomputer.png" alt="images/medicalcomputer.png">
         <div class="card-body">
             <h5 class="card-title">Time to save this operation</h5>
@@ -230,7 +234,8 @@
                 <h5 class="mb-0">
                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
                             aria-expanded="false" aria-controls="collapseTwo">
-                        The back end was created with Node.js, Express.js and MongoDB/Mongoose, try creating an account and logging in!
+                        The back end was created with Node.js, Express.js and MongoDB/Mongoose, try creating an account
+                        and logging in!
                     </button>
                 </h5>
             </div>
@@ -274,11 +279,11 @@
 <style>
     /* Extra small devices (phones, 640px and down) */
     @media only screen and (max-width: 640px) {
-        #singleCard{
+        #singleCard {
             display: none;
         }
 
-        #accordion{
+        #accordion {
             transform: translateX(-15px);
         }
     }

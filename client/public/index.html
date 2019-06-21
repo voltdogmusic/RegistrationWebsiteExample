@@ -148,7 +148,7 @@
                 passwordTop = $('#passwordTop').val();
                 $.ajax({
                     type: 'POST',
-                    url: localURL + '/api/user/login',
+                    url: herokuURL + '/api/user/login',
                     data: JSON.stringify({"email": emailTop, "password": passwordTop}),
                     success: function (data) {
 
@@ -647,7 +647,7 @@
 
             $.ajax({
                 type: 'POST',
-                url: localURL + '/api/user/register',
+                url: herokuURL + '/api/user/register',
                 data: JSON.stringify({
                     "firstName": firstName,
                     "lastName": lastName,

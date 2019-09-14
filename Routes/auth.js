@@ -21,7 +21,7 @@ router.get('/register', async (req, res) => {
 router.post('/register', async (req, res) => {
 
     //validating the user information
-    //this is causing an unhandled promise rejection
+    //this is causing an unhandled promise rejection, get rid of catch and reupload after testing
     const {error} = registerValidation(req.body)
         .catch((err) => console.log('Registration Failed'));
     if (error) {
